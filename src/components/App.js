@@ -10,17 +10,21 @@ const App = () => {
   
   async function fetchData(){
 
+    try{
     const response= await fetch("https://dummyjson.com/products");
     const data= await response.json();
 
     setData(data);
-
+    }
+    catch(error){
+      setData(error);
+    }
   }
     return (
     <div>
         {/* Do not remove the main div */}
         {
-          !data?<p>Loading...</p>:<pre>{JSON.stringify(data)}</pre>
+          !data?<h1>Loading...</h1>:<pre>{JSON.stringify(data)}</pre>
         }
     </div>
   )
