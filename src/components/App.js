@@ -20,7 +20,7 @@ const App = () => {
     <div>
         {/* Do not remove the main div */}
         {
-          !data?<p>Loading....</p>:<pre>{JSON.stringify(data)}</pre>
+          !data?<p>Loading...</p>:<pre>{JSON.stringify(data)}</pre>
         }
     </div>
   )
